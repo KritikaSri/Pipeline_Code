@@ -30,7 +30,7 @@ pipeline{
 				         sh 'mvn integration-test'
 					}
 				}
-			  /* stage('Static Code Analysis Stage'){
+			  stage('Static Code Analysis Stage'){
 		                steps{
 		         		sh 'mvn sonar:sonar'
 				      }
@@ -42,7 +42,7 @@ pipeline{
 	              			}
 				 }
 	       			}
-	                 */
+	                 
 		 	stage('Testing Stage'){
 		  		steps{
 			  		sh 'mvn test'
@@ -50,13 +50,13 @@ pipeline{
 		      			 sh 'mvn surefire-report:report'
 					 }
 				}
-		      /* stage('Code Coverage Test'){
+		       stage('Code Coverage Test'){
 				steps{
 					sh 'mvn cobertura:cobertura' 
 					cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'target/site/cobertura/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
 					}
 				}
-			*/	
+				
 			 stage('Code Coverage Test'){
 				steps{
 			         	 jacoco execPattern: '**/jacoco.exec'
@@ -70,14 +70,14 @@ pipeline{
 							sh 'mvn findbugs:findbugs'
 							}
 						}
-					/*	
+						
 		          		stage('Performance Testing'){
 			  			
 			     			steps{
 			           			sh 'mvn verify -X'
 		                   			}
 		           			}
-					*/	
+						
 					}
 				}
 				
