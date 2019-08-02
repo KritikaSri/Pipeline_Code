@@ -7,7 +7,15 @@
 	<version>0.0.5</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
-
+	
+	<properties>
+		<sonar.projectKey>MyProjectKey</sonar.projectKey>
+		<sonar.projectName>My Project</sonar.projectName>
+		<sonar.projectVersion>0.1</sonar.projectVersion>
+		<sonar.language>java</sonar.language>
+		<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 		    <groupId>org.apache.poi</groupId>
@@ -97,9 +105,9 @@
     <pluginManagement>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>2.9</version>
+                <version>3.6.0.1398</version>
             </plugin>
         </plugins>
     </pluginManagement>
