@@ -3,11 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 <!--comment added5-->
   <groupId>ADMCOE</groupId>
-  <artifactId>Test</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
-  <packaging>war</packaging>
-<!--comment added5-->
-  <name>Test</name>
+ <artifactId>myweb</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.5</version>
+	<name>my-app</name>
   <url>http://maven.apache.org</url>
 
   <properties>
