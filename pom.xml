@@ -7,15 +7,7 @@
 	<version>0.0.5</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
-	
-	<properties>
-		<sonar.projectKey>MyProjectKey</sonar.projectKey>
-		<sonar.projectName>My Project</sonar.projectName>
-		<sonar.projectVersion>0.1</sonar.projectVersion>
-		<sonar.language>java</sonar.language>
-		<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
-	</properties>
-	
+
 	<dependencies>
 		<dependency>
 		    <groupId>org.apache.poi</groupId>
@@ -28,12 +20,17 @@
   			<version>6.8</version>
  			 <scope>test</scope>
 		</dependency>
-            <dependency>
+
+
+		 <dependency>
         		<groupId>org.seleniumhq.selenium</groupId>
         		<artifactId>selenium-java</artifactId>
         		<version>3.141.59</version>
     		</dependency> 
-	<dependency>
+		
+		
+
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
@@ -56,6 +53,7 @@
     <artifactId>ApacheJMeter</artifactId>
     <version>4.0</version>
 </dependency>
+	
 	</dependencies>
 <distributionManagement>
     <repository>
@@ -83,10 +81,11 @@
         </plugin>
 	   
 	<plugin>
-                <groupId>com.lazerycode.jmeter</groupId>
+                    <groupId>com.lazerycode.jmeter</groupId>
                     <artifactId>jmeter-maven-plugin</artifactId>
                     <version>2.8.5</version>
-          <executions>
+                   
+<executions>
           <execution>
             <id>jmeter-tests</id>
             <phase>verify</phase>
@@ -101,18 +100,14 @@
             </execution>
         </executions>
                 </plugin>
-   <build>
-    <pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.6.0.1398</version>
-            </plugin>
-        </plugins>
-    </pluginManagement>
-     </build>
- <plugin>
+	     
+	<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>findbugs-maven-plugin</artifactId>
+            <version>3.0.4</version> <!-- using latest from maven central, feel free to use any specific -->
+        </plugin>
+	     
+        <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <version>1.4.2.RELEASE</version> <!-- using latest from maven central, feel free to use any specific -->
@@ -122,7 +117,7 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.19</version>
         </plugin>
-	<!-- <plugin>
+ 	<!-- <plugin>
 		<groupId>org.jacoco</groupId>
 		<artifactId>jacoco-maven-plugin</artifactId>
 		<version>0.8.2</version>
@@ -165,7 +160,8 @@
 </build>
 <reporting>
     <plugins>
-	  <plugin>
+	     
+         <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
               <version>3.0.4</version> <!--have modified this -->
@@ -180,3 +176,4 @@
 </reporting>
 	
 </project>
+
