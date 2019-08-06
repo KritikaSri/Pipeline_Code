@@ -5,7 +5,7 @@ pipeline{
 			jdk 'JAVA_HOME'
 			}
 	    	
-		
+		agent { label 'master' }
 	     	 stages{
 	        	   stage('Checkout Stage'){
 	           		steps{
