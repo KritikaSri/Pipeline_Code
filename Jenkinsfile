@@ -46,5 +46,18 @@ pipeline{
 			    bat 'mvn cobertura:cobertura'
 		    }
 	    }
-	}	
-}
+		   
+		stage('Package'){
+          		steps{
+				bat 'mvn war:war'
+			}
+		}
+
+        stage('Deploy2'){
+				steps{
+				bat 'mvn deploy'
+			}
+		}
+	}
+}	
+
