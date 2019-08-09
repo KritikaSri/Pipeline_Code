@@ -5,5 +5,6 @@ oa "C:\Program Files (x86)\Jenkins\workspace\Cicd_pipeline\AppScan\AppScan_Pipel
 echo "completed"
 sc "C:\Program Files (x86)\Jenkins\workspace\Cicd_pipeline\AppScan\AppScan_Pipeline.ppf"
 echo "ApplicationScan"
+pause
 publishassessase "https://blrkeccdsrv01.ad.infosys.com:9443/ase"
 pause
