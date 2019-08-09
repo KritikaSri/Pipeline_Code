@@ -4,4 +4,6 @@ echo "logged in"
 oa "C:\Program Files (x86)\Jenkins\workspace\Cicd_pipeline\AppScan\AppScan_Pipeline.paf"
 echo "completed"
 scan "C:\Program Files (x86)\Jenkins\workspace\Cicd_pipeline\AppScan\AppScan_Pipeline.ppf"
+echo "ApplicationScan"
+publishassessase https://blrkeccdsrv01.ad.infosys.com:9443/ase
 pause 
